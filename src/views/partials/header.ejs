@@ -1,0 +1,63 @@
+<div class="userLogin">
+    <% if(typeof userLogin === "undefined"){%>
+        <h1>Falta logear usuario</h1>
+    <%}else if(userLogin.admin == "true"){%>
+        <h1>Bienvenido <%=userLogin.nombre%> ★</h1>
+    <%}else{%>
+        <h1> Bienvenido <%=userLogin.nombre%></h1> 
+    <%}%>
+</div>
+
+
+<div class="header-principal">
+    <div class="header-principal-1">
+        <!--BURGER-->
+        <div class="hamburguesa">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="logo-2">
+            <img src="/img/vraiklat-logo.png" alt="Logo Vraiklat-769pxVV">
+        </div>
+        
+        <div class="logo-1">
+            <img  src="/img/Logo.jpg" alt="Logo Vraiklat-769px^^">
+        </div>   
+    </div>
+    
+    <!-- BUSCADOR-->    
+    
+    
+    
+
+    <div class="iconos">
+        <div class="body-buscar">
+            <div class="buscar">
+                <form action="/product/buscar" method="POST">
+                    <input type="text" placeholder="Buscar" required class="buscar-input" name="buscar">
+
+                    <div class="btn">
+                        <button type="submit" class="boton-inputBuscar"><i class="fas fa-search icon"></i></button>  
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--LOGIN/REGISTER-->
+        <div class="login-register">
+            <% if(typeof userLogin === "undefined"){%>
+                <a href="/login"><i class="fa-solid fa-user"></i></a>
+            <%}else{%>
+                <a href="/users/<%= userLogin.id_usuario%>/edit"><i class="fa-solid fa-user"></i></a> 
+            <%}%>
+            
+        </div>
+        <!--CARRITO-->
+        <div class="carrito">
+            <% if(typeof userLogin === "undefined"){%>
+                <a href="/login"><i class="fa-solid fa-cart-arrow-down"></i></a>
+            <%}else{%>
+                <a href="/cart"><i class="fa-solid fa-cart-arrow-down"></i></a>
+            <%}%>
+        </div>  
+    </div>
+</div>
+

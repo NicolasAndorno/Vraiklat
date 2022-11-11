@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+</head>
+<body>
+    <header>
+        <%- include('../partials/header.ejs') %>
+
+        <%- include('../partials/nav-bar.ejs') %>
+    </header>
+    <div class="container">
+        <div class="tarjeta">
+            <div class="imagen">
+                <% if(!product.imagen){%>
+                    <img src="/img/popu-7.jpg" alt="Foto default" >
+                <%}else{%>
+                    <img src="/img/product/<%= product.imagen%>" alt="Foto producto" > 
+                <%}%>
+            </div>
+            <div class="info">
+                <h2><%= product.nombre%></h2>
+                <div class="califi"></div>
+                <div class="precio">
+                    <h3>$<%= product.precio_unidad%></h3>
+                </div>
+                <div class="descrip">
+                    <h4>Descripción</h4>
+                </div>
+                <div class="detalla-producto">
+                    <p><%= product.descripcion%></p> 
+                </div>
+                <div class="boton">
+                    <button type="submit" name="">Añadir al carrito</button>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+
+
+</body>
+</html>

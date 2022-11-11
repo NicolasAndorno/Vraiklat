@@ -1,0 +1,93 @@
+
+.grilla{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    /*grid-template-rows: 300px 300px 300px;*/
+    grid-gap: 75px;
+    padding: 20px;
+    /*max-width: 1300px;*/
+    margin: auto;
+}
+
+.grilla a{
+    display: none;
+}
+
+a.hiper-fotos{
+    display: block;
+    
+}
+
+a.boton-edit{
+    display: block;
+}
+
+a.hiper-edit{
+    display: block;
+}
+
+.botones-grilla{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.fotos-grilla{
+    /*height: 70%;*/
+    width: 70%;
+    height: 200px;
+    border-radius: 12px;
+}
+
+.info-producto-grilla{
+    text-align: center;
+}
+
+.descripcion-grilla{
+    text-align: center;
+    color: black;
+}
+
+.truck-grilla{
+    color: black;
+}
+
+main section div.grilla article img:hover{
+    box-shadow: 0px 0px 50px rgb(230, 0, 0);
+}
+
+/* SACAR ESTILO A BOTON */
+button.borrar-producto-usuario{
+    background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    
+}
+
+button.crear-producto-usuario{
+    width: 200px;
+    margin-top: 15px;   
+    border: 2px solid #730e16
+}
+
+
+
+@media (min-width:800px) {
+    .grilla{
+        padding: 70px;
+        grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    }
+    
+    .fotos-grilla{
+    /*height: 70%;*/
+    width: 90%;
+    height: 300px;
+    }
+    
+
+}

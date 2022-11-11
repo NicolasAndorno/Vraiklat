@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+<body>
+<header>  
+    <%- include('./partials/header.ejs') %>
+
+    <%- include('./partials/nav-bar.ejs') %>
+</header>
+        <!--BANNER HOME-->
+        <div class="banner-home">
+        <img src="/img/banner.png" alt="Banner Vraiklat">
+        </div>
+        
+        
+<main>
+
+    <!-- <div class="banner-home">
+        <img src="/img/BANNER_QUE VAS A PEDIR.jpg" alt="Banner 2 Vraiklat">
+    </div> -->
+        <!--PEDIDO HOY- 3 PRODUCTOS --->
+        <section class="pedido-hoy">
+            <h4 class="titular-pedido">¿Que vas a pedir hoy?</h4>
+            <div class="pedido-productos">
+                <article class="conteiner-helado">
+                    <% if(userLogin != undefined){%>
+                        <a href="/#"> <img class="fotos-pedido" src="/img/helado-pedido.jpg" alt="Foto Helados"></a>  
+                    <%}else{%>
+                        <a href="/login"><img class="fotos-pedido" src="/img/helado-pedido.jpg" alt="Foto Helados"></a>
+                    <%}%>
+                    <p>Helado</p> 
+                </article>
+                <article class="conteiner-chocolate">
+                    <% if(userLogin != undefined){%>
+                        <a href="/#"> <img class="fotos-pedido" src="/img/choco-pedido.jpg" alt="Foto-Chocolate"></a> 
+                    <%}else{%>
+                        <a href="/login"><img class="fotos-pedido" src="/img/choco-pedido.jpg" alt="Foto-Chocolate"></a>
+                    <%}%>
+                    <p>Chocolate</p>
+                </article>
+                <article class="conteiner-alfajor">
+                    <% if(userLogin != undefined){%>
+                        <a href="/#"> <img class="fotos-pedido" src="/img/alfajor-pedido.jpg" alt="Foto Alfajores"></a> 
+                    <%}else{%>
+                        <a href="/login"><img class="fotos-pedido" src="/img/alfajor-pedido.jpg" alt="Foto Alfajores"></a>
+                    <%}%>
+                    <p>Alfajor</p>
+                </article>
+            </div>
+        </section>
+
+        <!--PRODUCTOS POPÚLARES - 6 PRODUCTOS --->
+        <h4 class="titular-popular">Productos Populares</h4>
+        <section class="productos-populares">
+            <div class="productos">
+                <article>
+                    <% if(userLogin != undefined){%>
+                        <a href="/products"><img class="fotos" src="/img/popu-1.jpg" alt="Foto 1"></a> 
+                    <%}else{%>
+                        <a href="/login"><img class="fotos" src="/img/popu-1.jpg" alt="Foto 1"></i></a>
+                    <%}%> 
+                    <div class="info-producto">
+                        <div class="descripcion">Barra de chocolate</div>
+                    </div>
+                    <div class="icon-preguntas"> 
+                        <img src="/img/iconos/cart.png" alt="carrito" class="cart-icono">
+                    </div> 
+                    
+                    
+                    <!-- <div class="truck"><i class="fa-solid fa-truck"></i></div> ICONO CARRITO --> 
+
+
+                    
+                </article>
+                <article>
+                    <% if(userLogin != undefined){%>
+                        <a href="/products"><img class="fotos" src="/img/popu-2.jpg" alt="Foto 2"></a> 
+                    <%}else{%>
+                        <a href="/login"><img class="fotos" src="/img/popu-2.jpg" alt="Foto 2"></a>
+                    <%}%>
+                    <div class="info-producto">  
+                        <div class="descripcion">Chocolate </div>
+                    </div>
+                    <div class="icon-preguntas"> 
+                        <img src="/img/iconos/cart.png" alt="carrito" class="cart-icono">
+                    </div> 
+            
+                    
+                </article>
+                <article>
+                    <% if(userLogin != undefined){%>
+                        <a href="/products"> <img class="fotos" src="/img/_MG_8356 (1).jpg" alt="Foto 3"></a>
+                    <%}else{%>
+                        <a href="/login"><img class="fotos" src="/img/_MG_8356 (1).jpg" alt="Foto 3"></a>
+                    <%}%>   
+                    <div class="info-producto">                     
+                        <div class="descripcion">Helado ddl</div>
+                    </div> 
+                    <div class="icon-preguntas"> 
+                        <img src="/img/iconos/cart.png" alt="carrito" class="cart-icono">
+                    </div> 
+                    
+                    
+                </article>
+                <article>
+                    <% if(userLogin != undefined){%>
+                        <a href="/products"><img class="fotos" src="/img/popu-5.jpg" alt="Foto 4"></a>
+                    <%}else{%>
+                        <a href="/login"><img class="fotos" src="/img/popu-5.jpg" alt="Foto 4"></a>
+                    <%}%>    
+                    <div class="info-producto">
+                        <div class="descripcion">Copa helado</div>
+                    </div>    
+                    <div class="icon-preguntas"> 
+                        <img src="/img/iconos/cart.png" alt="carrito" class="cart-icono">
+                    </div>             
+                    
+                </article>
+                <article>
+                    <% if(userLogin != undefined){%>
+                        <a href="/products"><img class="fotos" src="/img/21d91310-333e-4d96-b12f-5a54dea265fa.jpg" alt="Foto 5"></a>
+                    <%}else{%>
+                        <a href="/login"><img class="fotos" src="/img/21d91310-333e-4d96-b12f-5a54dea265fa.jpg" alt="Foto 5"></a>
+                    <%}%>  
+                    <div class="info-producto">
+                        <div class="descripcion">Tableta mil hojas</div>
+                    </div>       
+                    <div class="icon-preguntas"> 
+                        <img src="/img/iconos/cart.png" alt="carrito" class="cart-icono">
+                    </div>           
+
+                </article>
+                <article>
+                    <% if(userLogin != undefined){%>
+                        <a href="/products"><img class="fotos" src="/img/popu-6.jpg" alt="Foto 6"></a> 
+                    <%}else{%>
+                        <a href="/login"><img class="fotos" src="/img/popu-6.jpg" alt="Foto 6"></a>
+                    <%}%>   
+                    <div class="info-producto">
+                        <div class="descripcion">Tableta</div>
+                    </div>        
+                    <div class="icon-preguntas"> 
+                        <img src="/img/iconos/cart.png" alt="carrito" class="cart-icono">
+                    </div>           
+                    
+
+                </article>
+        </section>
+        <section>
+            <h4 class="titular-pedido">Ubicacion locales</h4>
+            <div class="map-responsive">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.163900256963!2d-58.43564899567138!3d-34.57471915820801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb595d03aa8b5%3A0x36df34602538435e!2sDorrego%20Y%20Cabildo!5e0!3m2!1ses!2sar!4v1656123699943!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="map-responsive-textos">
+                <p class="texto-mapa">Local 1: Dorrego y cabildo</p>
+                <p class="texto-mapa">Local 2: Dorrego y cabildo</p>
+                <p class="texto-mapa">Local 3: Dorrego y cabildo</p>
+                <p class="texto-mapa">Local 4: Dorrego y cabildo</p>
+            </div>  
+        </section>
+    </main>
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>  
+</body>
+</html>
+

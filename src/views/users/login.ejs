@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+</head>
+<body>
+    <header class="header-login">  
+        <%- include('../partials/header.ejs') %>
+
+        <%- include('../partials/nav-bar.ejs') %>
+    </header> 
+            
+    <section class="formulario-login">       
+        <form action="/login" method="POST" class="formulario" id="login">
+
+            <div class="contenedor-usuario">
+                <input type="text"  name="inpUsuario" class="inp-usuario" placeholder="Ingrese su correo electronico" value="<%= locals.prev && prev.nombre ? prev.nombre : '' %>" id="email-usuario-login">
+            </div>
+
+            <div class="label">
+                <% if(locals.errors && errors.inpUsuario){ %>
+                    <label class="label-form-msgError">!!! <%= errors.inpUsuario.msg %> !!!</label>
+                    <%}%>
+            </div>
+
+            <div class="contrase">
+                <input type="password" name="contraseña" class="inp-contrase" placeholder="Ingrese su contraseña" id="contraseña-usuario-login">
+            </div>
+
+            <div class="label">
+                <% if(locals.errors && errors.contraseña){ %>
+                    <label class="label-form-msgError">!!! <%= errors.contraseña.msg %> !!!</label>
+                    <%}%>
+            </div>
+
+            <div class="label">
+                <% if(typeof userNotLoggin === "undefined"){%>
+                    <h1></h1>
+                <%}else if(userNotLoggin){%>
+                    <label class="label-form-msgError">!!! No existe el usuario !!!</label>
+                <%}%>
+            </div>
+            
+            <!--<% if(userNotLoggin = undefined){%>
+                <h1> A</h1>
+            <%}else if(userNotLoggin){%>
+                <label class="label-form-msgError">!!! No existe el usuario !!!</label>
+            <%}else{%>
+                <h1> B</h1>
+            <%}%>-->
+            
+
+            <div class="boton-login">
+                <button type="submit" class="button-login">Enviar</button>
+            </div>
+        </form>
+        <div class="no-tienes-cuenta">
+            <span>¿No tienes una cuenta?</span>
+            <div class="link-registrar"><a href="/register">Crear cuenta</a></div>
+        </div>
+    </section>            
+    
+    <footer class="footer-login">
+        <%- include('../partials/footer.ejs') %>
+    </footer> 
+    
+    <script src="/js/validacionLogin.js"></script> 
+    
+</body>           
+</html>
+
